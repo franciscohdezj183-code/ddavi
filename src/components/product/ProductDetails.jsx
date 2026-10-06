@@ -1,0 +1,5 @@
+import { Tag } from 'lucide-react'
+
+export function ProductDetails({ product, category, subcategory }) {
+  return <section className="border-y border-ddavi-pastel/35 py-10 sm:py-12" aria-labelledby="product-details-title"><div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr]"><div><p className="section-kicker">Conoce tu elección</p><h2 id="product-details-title" className="section-heading">Detalles del producto</h2></div><div><p className="max-w-3xl leading-8 text-ddavi-muted">{product.description}</p><dl className="mt-6 flex flex-wrap gap-3"><div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3"><Tag size={16} className="text-ddavi-primary-dark" /><dt className="sr-only">Categoría</dt><dd className="text-sm font-bold">{category.name}</dd></div><div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3"><Tag size={16} className="text-ddavi-primary-dark" /><dt className="sr-only">Subcategoría</dt><dd className="text-sm font-bold">{subcategory.name}</dd></div></dl></div></div></section>
+}
